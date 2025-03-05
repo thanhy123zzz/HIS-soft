@@ -31,6 +31,18 @@
       background-size: cover;
     }
 
+    .ads{
+      background-image: url('./dist/img/GIAYIN.gif');
+      width: 40%;
+      height: 15vh;
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover;
+      right: 0; 
+      top: 0;
+      position: absolute;
+    }
+
     #txtPhongKham {
       font-family: sans-serif;
       text-transform: uppercase;
@@ -49,6 +61,7 @@
       color: transparent;
       opacity: .5;
     }
+
     .text-shadow {
         font-size: 32px;
         font-weight: bold;
@@ -74,6 +87,7 @@
       text-align: center;
       font-size: 1.2rem;
     }
+
     .cell-active{
       /* background-color: #75EDD1; */
       /* color: #0146C7; */
@@ -106,6 +120,26 @@
     .fw-bold-2{
       font-weight: bold;
     }
+
+    .label-container {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .text-run{
+      display: inline-block;
+      padding-right: 50%;
+      animation: marquee 20s linear infinite;
+    }
+    .label {
+        display: inline-block;
+        padding-right: 50%;
+        animation: marquee 20s linear infinite;
+    }
+    @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
   </style>
   <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
 </head>
@@ -119,6 +153,8 @@
         <h1 class="position-absolute text-shadow mb-0" id="txtTenPhongKham" style="top: 50%; left: 25%;">
           VẠN PHÚC AN
         </h1>
+        <div class="ads">
+        </div>
       </div>
     </header>
     <div class="py-2 px-4">
@@ -353,6 +389,13 @@
                 </td>
               </tr>
             </table>
+          </div>
+        </div>
+        <div class="col-12 mt-1">
+          <div class="label-container">
+              <p class="mb-0 fw-bold-2 label">
+                BỆNH NHÂN QUA LƯỢT: NGUYỄN VĂN A - PHÒNG KHÁM NỘI 1 - SỐ ĐĂNG KÝ: 0004
+              </p>
           </div>
         </div>
       </div>
