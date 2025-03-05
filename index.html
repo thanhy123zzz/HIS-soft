@@ -135,11 +135,25 @@
         display: inline-block;
         padding-right: 50%;
         animation: marquee 20s linear infinite;
+        font-size: 1.1rem;
     }
     @keyframes marquee {
-            from { transform: translateX(100%); }
-            to { transform: translateX(-100%); }
-        }
+        from { transform: translateX(100%); }
+        to { transform: translateX(-100%); }
+    }
+    .clinic-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .clinic-logo img {
+        width: 80px;
+        margin-right: .4rem;
+    }
+    .clinic-details{
+      font-size: .5rem; 
+      font-weight: 700;
+    }
   </style>
   <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
 </head>
@@ -391,12 +405,23 @@
             </table>
           </div>
         </div>
-        <div class="col-12 mt-1">
+        <div class="col mt-1">
           <div class="label-container">
               <p class="mb-0 fw-bold-2 label">
                 BỆNH NHÂN QUA LƯỢT: NGUYỄN VĂN A - PHÒNG KHÁM NỘI 1 - SỐ ĐĂNG KÝ: 0004
               </p>
           </div>
+        </div>
+        <div class="col-auto mt-1">
+          <div class="clinic-info">
+            <div class="clinic-logo">
+                <img src="/dist/img/ty1.2-01.svg" alt="Clinic Logo"> <!-- Đổi "logo.png" thành hình ảnh logo của bạn -->
+            </div>
+            <div class="clinic-details">
+              <p class="mb-0">Đơn vị phối hợp thực hiện</p>
+              <p class="mb-0">Website: <a href="sixossoft.com">sixossoft.com</a></p>
+            </div>
+        </div>
         </div>
       </div>
     </div>
