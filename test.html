@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Text reflection</title>
+  <link href="./dist/css/tabler.min.css?1684106062" rel="stylesheet" />
+    <link href="./dist/css/tabler-flags.min.css?1684106062" rel="stylesheet" />
+    <link
+      href="./dist/css/tabler-payments.min.css?1684106062"
+      rel="stylesheet"
+    />
+    <link
+      href="./dist/css/tabler-vendors.min.css?1684106062"
+      rel="stylesheet"
+    />
+    <link href="./dist/css/demo.min.css?1684106062" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-image: url('/dist/img/bg-top.jpg');
+      width: 100%;
+      height: 15vh; /* You must set a specified height */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover;
+    }
+
+    #txtPhongKham {
+      font-family: sans-serif;
+      text-transform: uppercase;
+      font-size: 22px;
+    }
+
+    #txtPhongKham:before {
+      font-size: 22px;
+      content: attr(data-text);
+      transform-origin: bottom;
+      transform: rotateX(180deg);
+      position: absolute;
+      line-height: 0.81em;
+      background: linear-gradient(0deg, black 0, transparent 50%);
+      -webkit-background-clip: text;
+      color: transparent;
+      opacity: .5;
+    }
+    .text-shadow {
+        font-size: 28px;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), 
+                    -1px -1px 0px #FFA500, 
+                    1px 1px 0px #FFA500;
+    }
+
+    .table-custom {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table, td, th {  
+      border: 1.5px solid black;
+    }
+
+    th {
+      background-color: #ddd;
+      text-align: center;
+      font-size: .8rem;
+    }
+    .cell-active{
+      background-color: #75EDD1;
+      color: #0146C7;
+    }
+
+    .cell-stt{
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 10%;
+      text-align: center;
+      padding: 0 .8rem;
+    }
+
+    .hand{
+      width: 1%;
+    }
+
+    .text-tenbn{
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .fw-bold-2{
+      font-weight: bold;
+    }
+  </style>
+  <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+    <header class="position-relative">
+      <div class="">
+        <h2 class="position-absolute mb-0" id="txtPhongKham" style="top: 8%; left: 1%;" data-text="PHÒNG KHÁM ĐA KHOA">
+          PHÒNG KHÁM ĐA KHOA
+        </h2>
+        <h1 class="position-absolute text-shadow mb-0" id="txtTenPhongKham" style="top: 50%; left: 20%;">
+          VẠN PHÚC AN
+        </h1>
+      </div>
+    </header>
+    <div class="p-2">
+      <div class="row row-cards">
+        <div class="col-6">
+          <div class="card">
+            <table class="table-custom">
+              <tr>
+                <th colspan="3">
+                  PHÒNG KHÁM NỘI 1
+                </th>
+              </tr>
+              <tr>
+                <td class="text-center hand">
+                  <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-hand-finger-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 8h8.5a1.5 1.5 0 0 1 0 3h-7.5" /><path d="M13.5 11h2a1.5 1.5 0 0 1 0 3h-2.5" /><path d="M14.5 14a1.5 1.5 0 0 1 0 3h-1.5" /><path d="M13.5 17a1.5 1.5 0 1 1 0 3h-4.5a6 6 0 0 1 -6 -6v-2v.208a6 6 0 0 1 2.7 -5.012l.3 -.196q .718 -.468 5.728 -3.286a1.5 1.5 0 0 1 2.022 .536c.44 .734 .325 1.674 -.28 2.28l-1.47 1.47" /></svg>
+                </td>
+                <td class="cell-active cell-stt">
+                  12
+                </td>
+                <td class="cell-active text-center">
+                  <p class="text-tenbn mb-0">
+                    QUỲNH NGUYỄN HUYỀN TRANG
+                  </p>
+                  <p class="text-sodk mb-0">
+                    Số đăng ký:
+                    <b class="fw-bold-2">1001</b>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center" rowspan="2">
+                </td>
+                <td class="cell-stt">
+                  13
+                </td>
+                <td class="text-center">
+                  <p class="text-tenbn mb-0 text-red">
+                    NGUYỄN THANH Ý
+                  </p>
+                  <p class="text-sodk mb-0">
+                    Số đăng ký:
+                    <b class="fw-bold-2">1002</b>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell-stt">
+                  14
+                </td>
+                <td class="text-center">
+                  <p class="text-tenbn mb-0 text-red">
+                    VÕ TRẦN UY
+                  </p>
+                  <p class="text-sodk mb-0">
+                    Số đăng ký:
+                    <b class="fw-bold-2">1003</b>
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <table class="table-custom">
+              <tr>
+                <th colspan="3">
+                  PHÒNG KHÁM NỘI 1
+                </th>
+              </tr>
+              <tr>
+                <td class="text-center hand">
+                  <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-hand-finger-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 8h8.5a1.5 1.5 0 0 1 0 3h-7.5" /><path d="M13.5 11h2a1.5 1.5 0 0 1 0 3h-2.5" /><path d="M14.5 14a1.5 1.5 0 0 1 0 3h-1.5" /><path d="M13.5 17a1.5 1.5 0 1 1 0 3h-4.5a6 6 0 0 1 -6 -6v-2v.208a6 6 0 0 1 2.7 -5.012l.3 -.196q .718 -.468 5.728 -3.286a1.5 1.5 0 0 1 2.022 .536c.44 .734 .325 1.674 -.28 2.28l-1.47 1.47" /></svg>
+                </td>
+                <td class="cell-active cell-stt">
+                  12
+                </td>
+                <td class="cell-active text-center">
+                  <p class="text-tenbn mb-0">
+                    QUỲNH NGUYỄN HUYỀN TRANG
+                  </p>
+                  <p class="text-sodk mb-0">
+                    Số đăng ký:
+                    <b class="fw-bold-2">1001</b>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center" rowspan="2">
+                </td>
+                <td class="cell-stt">
+                  13
+                </td>
+                <td class="text-center">
+                  <p class="text-tenbn mb-0 text-red">
+                    NGUYỄN THANH Ý
+                  </p>
+                  <p class="text-sodk mb-0">
+                    Số đăng ký:
+                    <b class="fw-bold-2">1002</b>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell-stt">
+                  14
+                </td>
+                <td class="text-center">
+                  <p class="text-tenbn mb-0 text-red">
+                    VÕ TRẦN UY
+                  </p>
+                  <p class="text-sodk mb-0">
+                    Số đăng ký:
+                    <b class="fw-bold-2">1003</b>
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <table class="table-custom">
+              <tr>
+                <th colspan="3">
+                  PHÒNG KHÁM NỘI 1
+                </th>
+              </tr>
+              <tr>
+                <td class="text-center hand">
+                  <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-hand-finger-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 8h8.5a1.5 1.5 0 0 1 0 3h-7.5" /><path d="M13.5 11h2a1.5 1.5 0 0 1 0 3h-2.5" /><path d="M14.5 14a1.5 1.5 0 0 1 0 3h-1.5" /><path d="M13.5 17a1.5 1.5 0 1 1 0 3h-4.5a6 6 0 0 1 -6 -6v-2v.208a6 6 0 0 1 2.7 -5.012l.3 -.196q .718 -.468 5.728 -3.286a1.5 1.5 0 0 1 2.022 .536c.44 .734 .325 1.674 -.28 2.28l-1.47 1.47" /></svg>
+                </td>
+                <td class="cell-active cell-stt">
+                  12
+                </td>
+                <td class="cell-active text-center">
+                  <p class="text-tenbn mb-0">
+                    QUỲNH NGUYỄN HUYỀN TRANG
+                  </p>
+                  <p class="text-sodk mb-0">
+                    Số đăng ký:
+                    <b class="fw-bold-2">1001</b>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center" rowspan="2">
+                </td>
+                <td class="cell-stt">
+                  13
+                </td>
+                <td class="text-center">
+                  <p class="text-tenbn mb-0 text-red">
+                    NGUYỄN THANH Ý
+                  </p>
+                  <p class="text-sodk mb-0">
+                    Số đăng ký:
+                    <b class="fw-bold-2">1002</b>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell-stt">
+                  14
+                </td>
+                <td class="text-center">
+                  <p class="text-tenbn mb-0 text-red">
+                    VÕ TRẦN UY
+                  </p>
+                  <p class="text-sodk mb-0">
+                    Số đăng ký:
+                    <b class="fw-bold-2">1003</b>
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <table class="table-custom">
+              <tr>
+                <th colspan="3">
+                  PHÒNG KHÁM NỘI 1
+                </th>
+              </tr>
+              <tr>
+                <td class="text-center hand">
+                  <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-hand-finger-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 8h8.5a1.5 1.5 0 0 1 0 3h-7.5" /><path d="M13.5 11h2a1.5 1.5 0 0 1 0 3h-2.5" /><path d="M14.5 14a1.5 1.5 0 0 1 0 3h-1.5" /><path d="M13.5 17a1.5 1.5 0 1 1 0 3h-4.5a6 6 0 0 1 -6 -6v-2v.208a6 6 0 0 1 2.7 -5.012l.3 -.196q .718 -.468 5.728 -3.286a1.5 1.5 0 0 1 2.022 .536c.44 .734 .325 1.674 -.28 2.28l-1.47 1.47" /></svg>
+                </td>
+                <td class="cell-active cell-stt">
+                  12
+                </td>
+                <td class="cell-active text-center">
+                  <p class="text-tenbn mb-0">
+                    QUỲNH NGUYỄN HUYỀN TRANG
+                  </p>
+                  <p class="text-sodk mb-0">
+                    Số đăng ký:
+                    <b class="fw-bold-2">1001</b>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center" rowspan="2">
+                </td>
+                <td class="cell-stt">
+                  13
+                </td>
+                <td class="text-center">
+                  <p class="text-tenbn mb-0 text-red">
+                    NGUYỄN THANH Ý
+                  </p>
+                  <p class="text-sodk mb-0">
+                    Số đăng ký:
+                    <b class="fw-bold-2">1002</b>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell-stt">
+                  14
+                </td>
+                <td class="text-center">
+                  <p class="text-tenbn mb-0 text-red">
+                    VÕ TRẦN UY
+                  </p>
+                  <p class="text-sodk mb-0">
+                    Số đăng ký:
+                    <b class="fw-bold-2">1003</b>
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

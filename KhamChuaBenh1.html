@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<!--
+* Tabler - Premium and Open Source dashboard template with responsive and high quality UI.
+* @version 1.0.0-beta19
+* @link https://tabler.io
+* Copyright 2018-2023 The Tabler Authors
+* Copyright 2018-2023 codecalm.net Paweł Kuna
+* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Dashboard - Tabler - Premium and Open Source dashboard template with
+      responsive and high quality UI.
+    </title>
+    <!-- CSS files -->
+    <link href="./dist/css/webfont/tabler-icons.min.css" rel="stylesheet" />
+    <link href="./dist/css/tabler.min.css?1684106062" rel="stylesheet" />
+    <link href="./dist/css/tabler-flags.min.css?1684106062" rel="stylesheet" />
+    <link
+      href="./dist/css/tabler-payments.min.css?1684106062"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+    <link
+      href="./dist/css/tabler-vendors.min.css?1684106062"
+      rel="stylesheet"
+    />
+    <link href="./dist/css/demo.min.css?1684106062" rel="stylesheet" />
+    <style>
+      @import url("https://rsms.me/inter/inter.css");
+      :root {
+        --tblr-font-sans-serif: "Inter Var", -apple-system, BlinkMacSystemFont,
+          San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+      }
+      body {
+        font-feature-settings: "cv03", "cv04", "cv11";
+      }
+      .form-control{
+        color: black !important;
+      }
+    </style>
+  </head>
+  <body class="layout-fluid">
+    <script src="./dist/js/demo-theme.min.js?1684106062"></script>
+    <div class="page">
+      <!-- Navbar -->
+      <div class="sticky-top">
+        <header class="navbar navbar-expand-md sticky-top d-print-none">
+          <div class="container-xl">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbar-menu"
+              aria-controls="navbar-menu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <h1
+              class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3"
+            >
+              <a href=".">
+                <img
+                  src="./static/logo.svg"
+                  width="110"
+                  height="32"
+                  alt="Tabler"
+                  class="navbar-brand-image"
+                />
+              </a>
+            </h1>
+            <div class="navbar-nav flex-row order-md-last">
+              <div class="d-none d-md-flex">
+                <a
+                  href="?theme=dark"
+                  class="nav-link px-0 hide-theme-dark"
+                  title="Enable dark mode"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                >
+                  <!-- Download SVG icon from http://tabler-icons.io/i/moon -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="?theme=light"
+                  class="nav-link px-0 hide-theme-light"
+                  title="Enable light mode"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                >
+                  <!-- Download SVG icon from http://tabler-icons.io/i/sun -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                    <path
+                      d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"
+                    />
+                  </svg>
+                </a>
+                <div class="nav-item dropdown d-none d-md-flex me-3">
+                  <a
+                    href="#"
+                    class="nav-link px-0"
+                    data-bs-toggle="dropdown"
+                    tabindex="-1"
+                    aria-label="Show notifications"
+                  >
+                    <!-- Download SVG icon from http://tabler-icons.io/i/bell -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"
+                      />
+                      <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+                    </svg>
+                    <span class="badge bg-red"></span>
+                  </a>
+                  <div
+                    class="dropdown-menu dropdown-menu-arrow dropdown-menu-end dropdown-menu-card"
+                  >
+                    <div class="card">
+                      <div class="card-header">
+                        <h3 class="card-title">Last updates</h3>
+                      </div>
+                      <div
+                        class="list-group list-group-flush list-group-hoverable"
+                      >
+                        <div class="list-group-item">
+                          <div class="row align-items-center">
+                            <div class="col-auto">
+                              <span
+                                class="status-dot status-dot-animated bg-red d-block"
+                              ></span>
+                            </div>
+                            <div class="col text-truncate">
+                              <a href="#" class="text-body d-block"
+                                >Example 1</a
+                              >
+                              <div
+                                class="d-block text-muted text-truncate mt-n1"
+                              >
+                                Change deprecated html tags to text decoration
+                                classes (#29604)
+                              </div>
+                            </div>
+                            <div class="col-auto">
+                              <a href="#" class="list-group-item-actions">
+                                <!-- Download SVG icon from http://tabler-icons.io/i/star -->
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon text-muted"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="2"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path
+                                    stroke="none"
+                                    d="M0 0h24v24H0z"
+                                    fill="none"
+                                  />
+                                  <path
+                                    d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-group-item">
+                          <div class="row align-items-center">
+                            <div class="col-auto">
+                              <span class="status-dot d-block"></span>
+                            </div>
+                            <div class="col text-truncate">
+                              <a href="#" class="text-body d-block"
+                                >Example 2</a
+                              >
+                              <div
+                                class="d-block text-muted text-truncate mt-n1"
+                              >
+                                justify-content:between ⇒
+                                justify-content:space-between (#29734)
+                              </div>
+                            </div>
+                            <div class="col-auto">
+                              <a href="#" class="list-group-item-actions show">
+                                <!-- Download SVG icon from http://tabler-icons.io/i/star -->
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon text-yellow"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="2"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path
+                                    stroke="none"
+                                    d="M0 0h24v24H0z"
+                                    fill="none"
+                                  />
+                                  <path
+                                    d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-group-item">
+                          <div class="row align-items-center">
+                            <div class="col-auto">
+                              <span class="status-dot d-block"></span>
+                            </div>
+                            <div class="col text-truncate">
+                              <a href="#" class="text-body d-block"
+                                >Example 3</a
+                              >
+                              <div
+                                class="d-block text-muted text-truncate mt-n1"
+                              >
+                                Update change-version.js (#29736)
+                              </div>
+                            </div>
+                            <div class="col-auto">
+                              <a href="#" class="list-group-item-actions">
+                                <!-- Download SVG icon from http://tabler-icons.io/i/star -->
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon text-muted"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="2"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path
+                                    stroke="none"
+                                    d="M0 0h24v24H0z"
+                                    fill="none"
+                                  />
+                                  <path
+                                    d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-group-item">
+                          <div class="row align-items-center">
+                            <div class="col-auto">
+                              <span
+                                class="status-dot status-dot-animated bg-green d-block"
+                              ></span>
+                            </div>
+                            <div class="col text-truncate">
+                              <a href="#" class="text-body d-block"
+                                >Example 4</a
+                              >
+                              <div
+                                class="d-block text-muted text-truncate mt-n1"
+                              >
+                                Regenerate package-lock.json (#29730)
+                              </div>
+                            </div>
+                            <div class="col-auto">
+                              <a href="#" class="list-group-item-actions">
+                                <!-- Download SVG icon from http://tabler-icons.io/i/star -->
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="icon text-muted"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="2"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path
+                                    stroke="none"
+                                    d="M0 0h24v24H0z"
+                                    fill="none"
+                                  />
+                                  <path
+                                    d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link d-flex lh-1 text-reset p-0"
+                  data-bs-toggle="dropdown"
+                  aria-label="Open user menu"
+                >
+                  <span
+                    class="avatar avatar-sm"
+                    style="background-image: url(./static/avatars/000m.jpg)"
+                  ></span>
+                  <div class="d-none d-xl-block ps-2">
+                    <div>Paweł Kuna</div>
+                    <div class="mt-1 small text-muted">UI Designer</div>
+                  </div>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-end dropdown-menu-arrow"
+                >
+                  <a href="#" class="dropdown-item">Status</a>
+                  <a href="./profile.html" class="dropdown-item">Profile</a>
+                  <a href="#" class="dropdown-item">Feedback</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="./settings.html" class="dropdown-item">Settings</a>
+                  <a href="./sign-in.html" class="dropdown-item">Logout</a>
+                </div>
+              </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-menu">
+              <div
+                class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./">
+                      <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                        <i class="ti ti-trash icon-2xl"></i>
+                      </span>
+                      <span class="nav-link-title"> trang chủ </span>
+                    </a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#navbar-base"
+                      data-bs-toggle="dropdown"
+                      data-bs-auto-close="outside"
+                      role="button"
+                      aria-expanded="false"
+                    >
+                      <span class="nav-link-icon d-md-none d-lg-inline-block"
+                        ><!-- Download SVG icon from http://tabler-icons.io/i/package -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path
+                            d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5"
+                          />
+                          <path d="M12 12l8 -4.5" />
+                          <path d="M12 12l0 9" />
+                          <path d="M12 12l-8 -4.5" />
+                          <path d="M16 5.25l-8 4.5" />
+                        </svg>
+                      </span>
+                      <span class="nav-link-title"> Danh mục </span>
+                    </a>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-menu-columns">
+                        <div class="dropdown-menu-column">
+                          <a class="dropdown-item" href="./accordion.html">
+                            Accordion
+                          </a>
+                          <a class="dropdown-item" href="./blank.html">
+                            Blank page
+                          </a>
+                          <a class="dropdown-item" href="./badges.html">
+                            Badges
+                            <span
+                              class="badge badge-sm bg-green-lt text-uppercase ms-auto"
+                              >New</span
+                            >
+                          </a>
+                          <a class="dropdown-item" href="./buttons.html">
+                            Buttons
+                          </a>
+                          <div class="dropend">
+                            <a
+                              class="dropdown-item dropdown-toggle"
+                              href="#sidebar-cards"
+                              data-bs-toggle="dropdown"
+                              data-bs-auto-close="outside"
+                              role="button"
+                              aria-expanded="false"
+                            >
+                              Cards
+                              <span
+                                class="badge badge-sm bg-green-lt text-uppercase ms-auto"
+                                >New</span
+                              >
+                            </a>
+                            <div class="dropdown-menu">
+                              <a href="./cards.html" class="dropdown-item">
+                                Sample cards
+                              </a>
+                              <a
+                                href="./card-actions.html"
+                                class="dropdown-item"
+                              >
+                                Card actions
+                                <span
+                                  class="badge badge-sm bg-green-lt text-uppercase ms-auto"
+                                  >New</span
+                                >
+                              </a>
+                              <a
+                                href="./cards-masonry.html"
+                                class="dropdown-item"
+                              >
+                                Cards Masonry
+                              </a>
+                            </div>
+                          </div>
+                          <a class="dropdown-item" href="./colors.html">
+                            Colors
+                          </a>
+                          <a class="dropdown-item" href="./datagrid.html">
+                            Data grid
+                            <span
+                              class="badge badge-sm bg-green-lt text-uppercase ms-auto"
+                              >New</span
+                            >
+                          </a>
+                          <a class="dropdown-item" href="./datatables.html">
+                            Datatables
+                            <span
+                              class="badge badge-sm bg-green-lt text-uppercase ms-auto"
+                              >New</span
+                            >
+                          </a>
+                          <a class="dropdown-item" href="./dropdowns.html">
+                            Dropdowns
+                          </a>
+                          <a class="dropdown-item" href="./modals.html">
+                            Modals
+                          </a>
+                          <a class="dropdown-item" href="./maps.html"> Maps </a>
+                          <a class="dropdown-item" href="./map-fullsize.html">
+                            Map fullsize
+                          </a>
+                          <a class="dropdown-item" href="./maps-vector.html">
+                            Vector maps
+                            <span
+                              class="badge badge-sm bg-green-lt text-uppercase ms-auto"
+                              >New</span
+                            >
+                          </a>
+                          <a class="dropdown-item" href="./navigation.html">
+                            Navigation
+                          </a>
+                          <a class="dropdown-item" href="./charts.html">
+                            Charts
+                          </a>
+                          <a class="dropdown-item" href="./pagination.html">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/pie-chart -->
+                            Pagination
+                          </a>
+                        </div>
+                        <div class="dropdown-menu-column">
+                          <a class="dropdown-item" href="./placeholder.html">
+                            Placeholder
+                          </a>
+                          <a class="dropdown-item" href="./steps.html">
+                            Steps
+                            <span
+                              class="badge badge-sm bg-green-lt text-uppercase ms-auto"
+                              >New</span
+                            >
+                          </a>
+                          <a class="dropdown-item" href="./stars-rating.html">
+                            Stars rating
+                            <span
+                              class="badge badge-sm bg-green-lt text-uppercase ms-auto"
+                              >New</span
+                            >
+                          </a>
+                          <a class="dropdown-item" href="./tabs.html"> Tabs </a>
+                          <a class="dropdown-item" href="./tables.html">
+                            Tables
+                          </a>
+                          <a class="dropdown-item" href="./carousel.html">
+                            Carousel
+                            <span
+                              class="badge badge-sm bg-green-lt text-uppercase ms-auto"
+                              >New</span
+                            >
+                          </a>
+                          <a class="dropdown-item" href="./lists.html">
+                            Lists
+                          </a>
+                          <a class="dropdown-item" href="./typography.html">
+                            Typography
+                          </a>
+                          <a class="dropdown-item" href="./offcanvas.html">
+                            Offcanvas
+                          </a>
+                          <a class="dropdown-item" href="./markdown.html">
+                            Markdown
+                          </a>
+                          <a class="dropdown-item" href="./dropzone.html">
+                            Dropzone
+                            <span
+                              class="badge badge-sm bg-green-lt text-uppercase ms-auto"
+                              >New</span
+                            >
+                          </a>
+                          <a class="dropdown-item" href="./lightbox.html">
+                            Lightbox
+                            <span
+                              class="badge badge-sm bg-green-lt text-uppercase ms-auto"
+                              >New</span
+                            >
+                          </a>
+                          <a class="dropdown-item" href="./tinymce.html">
+                            TinyMCE
+                            <span
+                              class="badge badge-sm bg-green-lt text-uppercase ms-auto"
+                              >New</span
+                            >
+                          </a>
+                          <a class="dropdown-item" href="./inline-player.html">
+                            Inline player
+                            <span
+                              class="badge badge-sm bg-green-lt text-uppercase ms-auto"
+                              >New</span
+                            >
+                          </a>
+                          <div class="dropend">
+                            <a
+                              class="dropdown-item dropdown-toggle"
+                              href="#sidebar-authentication"
+                              data-bs-toggle="dropdown"
+                              data-bs-auto-close="outside"
+                              role="button"
+                              aria-expanded="false"
+                            >
+                              Authentication
+                            </a>
+                            <div class="dropdown-menu">
+                              <a href="./sign-in.html" class="dropdown-item">
+                                Sign in
+                              </a>
+                              <a
+                                href="./sign-in-link.html"
+                                class="dropdown-item"
+                              >
+                                Sign in link
+                              </a>
+                              <a
+                                href="./sign-in-illustration.html"
+                                class="dropdown-item"
+                              >
+                                Sign in with illustration
+                              </a>
+                              <a
+                                href="./sign-in-cover.html"
+                                class="dropdown-item"
+                              >
+                                Sign in with cover
+                              </a>
+                              <a href="./sign-up.html" class="dropdown-item">
+                                Sign up
+                              </a>
+                              <a
+                                href="./forgot-password.html"
+                                class="dropdown-item"
+                              >
+                                Forgot password
+                              </a>
+                              <a
+                                href="./terms-of-service.html"
+                                class="dropdown-item"
+                              >
+                                Terms of service
+                              </a>
+                              <a href="./auth-lock.html" class="dropdown-item">
+                                Lock screen
+                              </a>
+                            </div>
+                          </div>
+                          <div class="dropend">
+                            <a
+                              class="dropdown-item dropdown-toggle"
+                              href="#sidebar-error"
+                              data-bs-toggle="dropdown"
+                              data-bs-auto-close="outside"
+                              role="button"
+                              aria-expanded="false"
+                            >
+                              <!-- Download SVG icon from http://tabler-icons.io/i/file-minus -->
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-inline me-1"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                stroke-width="2"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path
+                                  stroke="none"
+                                  d="M0 0h24v24H0z"
+                                  fill="none"
+                                />
+                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                <path
+                                  d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
+                                />
+                                <path d="M9 14l6 0" />
+                              </svg>
+                              Error pages
+                            </a>
+                            <div class="dropdown-menu">
+                              <a href="./error-404.html" class="dropdown-item">
+                                404 page
+                              </a>
+                              <a href="./error-500.html" class="dropdown-item">
+                                500 page
+                              </a>
+                              <a
+                                href="./error-maintenance.html"
+                                class="dropdown-item"
+                              >
+                                Maintenance page
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./KhamChuaBenh.html">
+                      <span class="nav-link-icon d-md-none d-lg-inline-block"
+                        ><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M9 11l3 3l8 -8" />
+                          <path
+                            d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9"
+                          />
+                        </svg>
+                      </span>
+                      <span class="nav-link-title"> Khám chữa bệnh </span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+              <div
+                class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last"
+              >
+                <form action="./" method="get" autocomplete="off" novalidate="">
+                  <div class="input-icon">
+                    <span class="input-icon-addon">
+                      <!-- Download SVG icon from http://tabler-icons.io/i/search -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path
+                          d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"
+                        ></path>
+                        <path d="M21 21l-6 -6"></path>
+                      </svg>
+                    </span>
+                    <input
+                      type="text"
+                      value=""
+                      class="form-control"
+                      placeholder="Tìm kiếm"
+                      aria-label="Search in website"
+                    />
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="page-wrapper">
+        <!-- Page header -->
+        <div class="page-body">
+          <div class="card">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs nav-fill" id="myTab" data-bs-toggle="tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a href="#tabs-tiepnhan" class="nav-link text-dark active" data-bs-toggle="tab" aria-selected="true" role="tab"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                      <path d="M16 19h6"></path>
+                      <path d="M19 16v6"></path>
+                      <path d="M6 21v-2a4 4 0 0 1 4 -4h4"></path>
+                  </svg>
+                    Tiếp nhận</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a href="#tabs-DSBenhNhan" class="nav-link text-dark" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab"><!-- Download SVG icon from http://tabler-icons.io/i/user -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon me-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path></svg>
+                    Danh sách bệnh nhân</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a href="#tabs-TheBHYT" class="nav-link text-dark" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab"><!-- Download SVG icon from http://tabler-icons.io/i/activity -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-id" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v10a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"></path>
+                      <path d="M9 10m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                      <path d="M15 8l2 0"></path>
+                      <path d="M15 12l2 0"></path>
+                      <path d="M7 16l10 0"></path>
+                  </svg>
+                    Quản lý thẻ BHYT</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body p-2">
+              <div class="tab-content">
+                <div class="tab-pane active show" id="tabs-tiepnhan" role="tabpanel">
+                  <div class="row">
+                    <div class="mb-2 col-sm-4 col-12">
+                      <label class="form-label mb-1">Quét QR</label>
+                      <textarea class="form-control" name="example-textarea-input" rows="1" placeholder="QR Code"></textarea>
+                    </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Mã Thẻ</label>
+                        <input type="text" class="form-control bg-indigo-lt" name="example-text-input" placeholder="Nhập mã thẻ">
+                      </div>
+                      <div class="mb-2 col-sm-3 col-12">
+                        <label class="form-label mb-1">Họ và tên</label>
+                        <input type="text" class="form-control bg-indigo-lt" name="example-text-input" placeholder="Nhập họ, tên">
+                      </div>
+                      <div class=" mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Ngày sinh</label>
+                        <input type="text" class="form-control bg-indigo-lt input-date" name="example-text-input" placeholder="Nhập ngày tháng năm sinh">
+            
+                      </div>
+                      <div class="mb-2 col-sm-1 col-12">
+                        <label class="form-label mb-1 text-white">.</label>
+                    
+                        <div class=""> <button class="btn w-100">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path d="M21 21l-6 -6"></path></svg>
+                          </button>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="border border-dark p-2 rounded mb-1">
+                    <div class="row">
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Mã BN</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Mã bệnh nhân">
+                      </div>
+                      <div class="mb-2 col-sm-4 col-12">
+                        <label class="form-label mb-1 mb-1">Tên BN</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Tên bệnh nhân">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Ngày sinh</label>
+                        <input type="text" class="form-control input-date" name="example-text-input" placeholder="Ngày Sinh">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">  
+                        <label class="form-label mb-1">Năm sinh</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Năm sinh">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Giới tính</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Giới tính">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="mb-2 col-sm-4 col-12">
+                        <label class="form-label mb-1">Địa chỉ</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Địa chỉ">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Quốc gia</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Quốc gia">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Tỉnh</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Tỉnh">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Huyện</label>
+                        <input type="text" class="form-control input-date" name="example-text-input" placeholder="Huyện">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">  
+                        <label class="form-label mb-1">Xã</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Xã">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Số ĐT</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Số điện thoại">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Email</label>
+                        <input type="email" class="form-control" name="example-text-input" placeholder="Email">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">  
+                        <label class="form-label mb-1">CCCD</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="CCCD">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Loại BN</label>
+                        <input type="text" class="form-control input-date" name="example-text-input" placeholder="Loại bệnh nhân">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">  
+                        <label class="form-label mb-1">Dân tộc</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Dân tộc">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">  
+                        <label class="form-label mb-1">Nghề</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Nghề nghiệp">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Ngày cấp</label>
+                        <input type="text" class="form-control input-date" name="example-text-input" placeholder="Số điện thoại">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Nơi cấp</label>
+                        <input type="email" class="form-control" name="example-text-input" placeholder="Nơi cấp">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Ngày đến</label>
+                        <input type="text" class="form-control input-date" name="example-text-input" placeholder="Ngày đến">
+                      </div>
+                      <div class="mb-2 col-sm-6 col-12">  
+                        <label class="form-label mb-1">Ghi chú</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Ghi chú">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border border-dark p-2 rounded mb-1 bg-azure-lt">
+                    <div class="row">
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Mã thẻ</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Mã thẻ">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">BHXH</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Mã số bảo hiểm xã hội">
+                      </div>
+                      <div class="mb-2 col-sm-4 col-12">
+                        <label class="form-label mb-1">Họ và tên</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Họ tên trả về">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Ngày sinh</label>
+                        <input type="text" class="form-control input-date" name="example-text-input" placeholder="Ngày sinh">
+                      </div>
+                      <div class="mb-2 col-sm-1 col-12">
+                        <label class="form-label mb-1">Năm</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Năm sinh">
+                      </div>
+                      <div class="mb-2 col-sm-1 col-12">
+                        <label class="form-label mb-1">CT</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Giới tính">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Mã Khu vực</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Mã khu vực">
+                      </div>
+                      <div class="mb-2 col-sm-4 col-12">
+                        <label class="form-label mb-1">CSKCB</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Cơ sở khám chữa bệnh">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Ngày bắt đầu</label>
+                        <input type="text" class="form-control input-date" name="example-text-input" placeholder="Ngày bắt đầu">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Ngày kết thúc</label>
+                        <input type="text" class="form-control input-date" name="example-text-input" placeholder="Ngày kết thúc">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Ngày đủ 5 năm</label>
+                        <input type="text" class="form-control input-date" name="example-text-input" placeholder="Ngày đủ 5 năm">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="mb-2 col-sm-4 col-12">
+                        <label class="form-label mb-1">Địa chỉ</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Địa chỉ">
+                      </div>
+                      <div class="mb-2 col-sm-2 col-12">
+                        <label class="form-label mb-1">Thời gian KT</label>
+                        <input type="text" class="form-control input-date" name="example-text-input" placeholder="Thời gian kiểm tra">
+                      </div>
+                      <div class="mb-2 col-sm-6 col-12">
+                        <label class="form-label mb-1">Thông báo kiểm tra</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Thông báo kiểm tra">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-2 d-flex justify-content-between">
+                    <button class="btn btn-icon btn-secondary">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-question-mark" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4"></path>
+                        <path d="M12 19l0 .01"></path>
+                    </svg>
+                    </button>
+                    <button class="btn btn-primary">
+                      Lưu
+                    </button>
+                  </div>
+              </div>
+                      <div class="tab-pane" id="tabs-DSBenhNhan" role="tabpanel">
+                        <div class="page-header d-print-none">
+                          <div class="w-100">
+                              <div class="row d-flex justify-content-between">
+                                  <div class="row col-9 col-sm-6 mb-2 p-0">
+                                      <div class="row">
+                                          <div class="col">                            
+                                              <div class="input-group">
+                                                  <input type="text" id="txtSearch" class="form-control" placeholder="Tìm kiếm thông tin" >
+                                                  <button data-bs-toggle="dropdown" type="button" class="btn dropdown-toggle dropdown-toggle-split"></button>
+                                                  <form class="dropdown-menu dropdown-menu-end p-3" id="formSearch">
+                                                          <div class="row row-cards">
+                                                              <div class="col-sm-6 col-md-6 pr-0 mt-2">
+                                                                  <div class="">
+                                                                      <input type="text" name="MaBenh" class="form-control" placeholder="Họ tên">
+                                                                  </div>
+                                                           </div>
+                                                          <div class="col-sm-6 col-md-6 pr-0 mt-2">
+                                                                  <div class="">
+                                                                      <input type="text" name="TenBenh" class="form-control" placeholder="Thẻ BHYT">
+                                                                  </div>
+                                                          </div>
+                                                          <div class="col-sm-6 col-md-6 pr-0 mt-2">
+                                                                  <div class="">
+                                                              <input type="text" name="NhomBenh" class="form-control" placeholder="Địa chỉ">
+                                                                  </div>
+                                                          </div>
+                                                          <div class="col-sm-6 col-md-6 pr-0 mt-2">
+                                                                  <div class="">
+                                                              <input type="text" name="ManTinh" class="form-control" placeholder="Điện thoại">
+                                                                  </div>
+                                                          </div>
+                                                          <div class="col-sm-6 col-md-6 pr-0 mt-2">
+                                                                  <div class="">
+                                                                      <input type="text" name="BenhCua" class="form-control" placeholder="Ngày">
+                                                                  </div>
+                                                          </div>
+                                                          <div class="col-sm-6 col-md-6 pr-0 mt-2">
+                                                                  <div class="">
+                                                              <input type="text" name="ThuongGap" class="form-control" placeholder="Khoa">
+                                                                  </div>
+                                                          </div>
+                                                          <div class="col-sm-6 col-md-6 pr-0 mt-2">
+                                                                  <div class="">
+                                                              <input type="text" name="BenhNam" class="form-control" placeholder="Phòng chuyển vào">
+                                                                  </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="dropdown-divider"></div>
+                                                  <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                                                  </form>
+                                              </div>    
+                                          </div>          
+                                          <div class="col-auto p-0">
+                                          <button onclick="searchWithKeyword()" class="btn btn-icon" aria-label="Button">
+                                                  <!-- Download SVG icon from http://tabler-icons.io/i/search -->
+                                                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path d="M21 21l-6 -6"></path></svg>
+                                              </button>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <!-- Page title actions -->
+                                  <div class="col-auto mb-2 p-0">
+                                      <div class="btn-list">
+                                          <a href="#" class="btn btn-primary d-md-none btn-icon" >
+                                              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                  <path d="M12 5l0 14"></path>
+                                                  <path d="M5 12l14 0"></path>
+                                              </svg>
+                                          </a>
+                                          <span class="d-md-inline">
+                                              <button class="btn btn-icon btn-success" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                      <path d="M4 6l16 0"></path>
+                                                      <path d="M4 12l16 0"></path>
+                                                      <path d="M4 18l16 0"></path>
+                                                  </svg>
+                                              </button>
+                                              <div class="dropdown-menu">
+                                                  <div class="dropdown-menu-columns">
+                                                  <div class="dropdown-menu-column">
+                                                          <label class="dropdown-item"><input class="form-check-input m-0 me-2 show-column" type="checkbox" value="MaBenh">Mã bệnh</label>
+                                                          <label class="dropdown-item"><input class="form-check-input m-0 me-2 show-column" type="checkbox" value="TenBenh">Tên bệnh</label>
+                                                          <label class="dropdown-item"><input class="form-check-input m-0 me-2 show-column" type="checkbox" value="NhomBenh">Nhóm bệnh</label>
+                                                          <label class="dropdown-item"><input class="form-check-input m-0 me-2 show-column" type="checkbox" value="ManTinh">Mãn tính</label>
+                                                          <label class="dropdown-item"><input class="form-check-input m-0 me-2 show-column" type="checkbox" value="BenhCua">Bệnh của</label>
+                                                          <label class="dropdown-item"><input class="form-check-input m-0 me-2 show-column" type="checkbox" value="ThuongGap">Thường gặp</label>
+                                                      </div>
+                                                     <div class="dropdown-menu-column">
+                                                          <label class="dropdown-item"><input class="form-check-input m-0 me-2 show-column" type="checkbox" value="BenhNam">Bệnh Năm</label>
+                                                          <label class="dropdown-item"><input class="form-check-input m-0 me-2 show-column" type="checkbox" value="KhongBh">Không bảo hiểm</label>
+                                                          <label class="dropdown-item"><input class="form-check-input m-0 me-2 show-column" type="checkbox" value="NgoaiDs">Ngoài danh sách</label>
+                                                          <label class="dropdown-item"><input class="form-check-input m-0 me-2 show-column" type="checkbox" value="ChuyenKhoa">Chuyên khoa</label>
+                                                          <label class="dropdown-item"><input class="form-check-input m-0 me-2 show-column" type="checkbox" value="MoTa">Mô tả</label>
+                                                          <label class="dropdown-item"><input class="form-check-input m-0 me-2 show-column" type="checkbox" value="HieuLuc">Hiệu lực</label>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </span>
+                                          <span href="#" class="d-none d-sm-none d-md-inline" data-bs-toggle="modal" data-bs-target="#modal-report" aria-label="Create new report">
+                                              <a class="btn btn-icon btn-secondary">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-question-mark" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                      <path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4"></path>
+                                                      <path d="M12 19l0 .01"></path>
+                                                  </svg>
+                                              </a>
+                                          </span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Page body -->
+                  
+                      <div class="page-body">
+                          <div class="w-100">
+                              <div class="card">
+                              <div style="display: none;" id="progress">
+                                  <div class="progress">
+                                      <div class="progress-bar progress-bar-indeterminate bg-blue"></div>
+                                  </div>
+                              </div>
+                              <div class="table-responsive" style="max-height:550px;" id="tableDM" onscroll="scrollTable()">
+                                      <table class="table table-vcenter card-table table-bordered table-hover">
+                                          <thead>
+                                              <tr>
+                                                  <th class="text-center MaBenh">Mã bệnh</th>
+                                                  <th class="text-center TenBenh">Tên bệnh</th>
+                                                  <th class="text-center NhomBenh">Nhóm bệnh</th>
+                                                  <th class="text-center ManTinh">Mãn tính</th>
+                                                  <th class="text-center BenhCua">Bệnh của</th>
+                                                  <th class="text-center ThuongGap">Thường gặp</th>
+                                                  <th class="text-center BenhNam">Bệnh năm</th>
+                                                  <th class="text-center KhongBh">Không bảo hiểm</th>
+                                                  <th class="text-center NgoaiDs">Ngoài danh sách</th>
+                                                  <th class="text-center ChuyenKhoa">Chuyên khoa</th>
+                                                  <th class="text-center MoTa">Mô tả</th>
+                                                  <th class="text-center HieuLuc">Hiệu lực</th>
+                                              <th class="text-center last-th-column" style="z-index:3;">Tùy chọn</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody id="tbody-table">
+                                                  <tr data-id="@d.Id">
+                                                  <td class="text-center MaBenh">
+                                                    <input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select invoice">
+                                                  </td>
+                                                  <td class="text-start TenBenh">@d.TenBenh</td>
+                                                  <td class="text-start NhomBenh">@d.NhomBenh</td>
+                                                  <td class="text-center ManTinh">@d.ManTinh</td>
+                                                  <td class="text-center BenhCua">@d.BenhCua</td>
+                                                  <td class="text-start ThuongGap">@d.ThuongGap</td>
+                                                  <td class="text-center BenhNam">@d.BenhNam</td>
+                                                  <td class="text-start KhongBh">@d.KhongBh</td>
+                                                  <td class="text-start NgoaiDs">@d.NgoaiDs</td>
+                                                  <td class="text-start ChuyenKhoa">@d.ChuyenKhoa</td>
+                                                  <td class="text-start MoTa">@d.MoTa</td>
+                                                  <td class="text-start HieuLuc">@d.HieuLuc</td>
+                                                  <td class="text-center last-td-column">
+                                                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                                          <button class="btn btn-icon bg-azure-lt" data-bs-toggle="tooltip" data-bs-placement="left" title="Sửa">
+                                                                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                                          <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"></path>
+                                                                          <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z"></path>
+                                                                          <path d="M16 5l3 3"></path>
+                                                                      </svg>
+                  
+                                                                  </button>
+                                                          <button class="btn btn-icon bg-dark-lt" data-bs-toggle="tooltip" data-bs-placement="right" title="Thay đổi trạng thái">
+                                                                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                                              <path d="M4 7l16 0"></path>
+                                                                              <path d="M10 11l0 6"></path>
+                                                                              <path d="M14 11l0 6"></path>
+                                                                              <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
+                                                                              <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                                                                          </svg>
+                                                                  </button>
+                                                      </div>
+                                                  </td>
+                                              </tr>
+                                          </tbody>
+                                      </table>
+                                  </div>
+                              </div>
+                          </div>
+                  </div>
+                      </div>
+                      <div class="tab-pane" id="tabs-TheBHYT" role="tabpanel">
+                        <h4>Activity tab</h4>
+                        <div>Donec ac vitae diam amet vel leo egestas consequat rhoncus in luctus amet, facilisi sit mauris accumsan nibh habitant senectus</div>
+                      </div>
+            </div>
+            </div>
+            
+          </div>      
+        </div>
+    </div>
+    <footer class="footer footer-transparent d-print-none">
+      <div class="container-xl">
+        <div class="row text-center align-items-center flex-row-reverse">
+          <div class="col-lg-auto ms-lg-auto"></div>
+          <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+            <ul class="list-inline list-inline-dots mb-0">
+              <li class="list-inline-item">Bản quyền bởi COL</li>
+              <li class="list-inline-item">v1.0.0-alpha1</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+       <!-- Modal -->
+       
+    
+    <script
+      src="./dist/libs/apexcharts/dist/apexcharts.min.js?1684106062"
+      defer
+    ></script>
+    <script
+      src="./dist/libs/jsvectormap/dist/js/jsvectormap.min.js?1684106062"
+      defer
+    ></script>
+    <script
+      src="./dist/libs/jsvectormap/dist/maps/world.js?1684106062"
+      defer
+    ></script>
+    <script
+      src="./dist/libs/jsvectormap/dist/maps/world-merc.js?1684106062"
+      defer
+    ></script>
+    <!-- Tabler Core -->
+    <script src="./dist/js/tabler.min.js?1684106062" defer></script>
+    <script src="./dist/js/demo.min.js?1684106062" defer></script>
+    <script src="./dist/js/Common.js" defer></script>
+    <script src="./dist/libs/Jquery/jquery.min.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var tabs = document.querySelectorAll('#myTab .nav-link');
+
+        // Bắt sự kiện khi tab thay đổi
+        tabs.forEach(function(tab) {
+          tab.addEventListener('shown.bs.tab', function(event) {
+            // Lấy tên tab đang hiển thị
+            var activeTab = event.target;
+            
+            // In tên tab ra console
+            console.log('Tab đang hiển thị:', activeTab.getAttribute('href').replace("#", ""));
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

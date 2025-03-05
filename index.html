@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+* Tabler - Premium and Open Source dashboard template with responsive and high quality UI.
+* @version 1.0.0-beta19
+* @link https://tabler.io
+* Copyright 2018-2023 The Tabler Authors
+* Copyright 2018-2023 codecalm.net Paweł Kuna
+* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Dashboard - Tabler - Premium and Open Source dashboard template with
+      responsive and high quality UI.
+    </title>
+    <!-- CSS files -->
+    <link href="./dist/css/tabler.min.css?1684106062" rel="stylesheet" />
+    <link href="./dist/css/tabler-flags.min.css?1684106062" rel="stylesheet" />
+    <link
+      href="./dist/css/tabler-payments.min.css?1684106062"
+      rel="stylesheet"
+    />
+    <link
+      href="./dist/css/tabler-vendors.min.css?1684106062"
+      rel="stylesheet"
+    />
+    <link href="./dist/css/demo.min.css?1684106062" rel="stylesheet" />
+    <style>
+      :root {
+          --tblr-font-sans-serif: "Inter Var", -apple-system, BlinkMacSystemFont,
+            San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+      }
+  
+      body {
+          font-feature-settings: "cv03", "cv04", "cv11";
+      }
+
+      #txtPhongKham {
+          font-size: 32px;
+          font-weight: bold;
+          color: #333;
+          text-transform: uppercase;
+          font-family: Arial, sans-serif;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+          display: inline-block;
+          position: relative;
+      }
+      #txtPhongKham::before {
+          content: attr(data-text);
+          transform-origin: bottom;
+          transform: rotateX(180deg);
+          position: absolute;
+          line-height: 0.87em;
+          background: linear-gradient(0deg, #fff 0, transparent 80%);
+          -webkit-background-clip: text;
+          color: transparent;
+          opacity: .5;
+      }
+  </style>
+  
+  <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    function g() {
+      var element = document.getElementById('chao2');
+      var opt = {
+        margin:       [0.5,0.25,0.5,0.25],
+        filename:     'myfile.pdf',
+        html2canvas:  { scale: 3 },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+
+      html2pdf(element, opt);
+    }
+  </script>
+  </head>
+  <body class="layout-fluid">
+    <script src="./dist/js/demo-theme.min.js?1684106062"></script>
+    
+    <div class="page">
+      <header class="position-relative">
+        <img src="/dist/img/bg-top.jpg" class="w-100"/>
+
+        <div class="p-2">
+          <h1 class="position-absolute" id="txtPhongKham" style="top: 5%; left: 1%;" data-text="PHÒNG KHÁM ĐA KHOA">
+            PHÒNG KHÁM ĐA KHOA
+          </h1>
+          <div class="" id="txtTenPhongKham">
+            VẠN PHÚC AN
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- Libs JS -->
+    <script
+      src="./dist/libs/apexcharts/dist/apexcharts.min.js?1684106062"
+      defer
+    ></script>
+    <script
+      src="./dist/libs/jsvectormap/dist/js/jsvectormap.min.js?1684106062"
+      defer
+    ></script>
+    <script
+      src="./dist/libs/jsvectormap/dist/maps/world.js?1684106062"
+      defer
+    ></script>
+    <script
+      src="./dist/libs/jsvectormap/dist/maps/world-merc.js?1684106062"
+      defer
+    ></script>
+    <!-- Tabler Core -->
+    <script src="./dist/js/tabler.min.js?1684106062" defer></script>
+    <script src="./dist/js/demo.min.js?1684106062" defer></script>
+  </body>
+</html>
